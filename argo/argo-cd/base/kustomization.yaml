@@ -1,0 +1,5 @@
+bases:
+  - ./namespace.yaml
+  - ./cluster-rbac
+  - ./crds
+  - ./base/
