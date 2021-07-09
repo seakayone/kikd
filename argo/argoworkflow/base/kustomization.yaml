@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ./manifests/base
+  - ./manifests/cluster-install/workflow-controller-rbac
+  - ./manifests/cluster-install/argo-server-rbac
+
+images:
+- name: docker.io/argoproj/workflow-controller
+  newTag: v3.1.1
+- name: docker.io/argoproj/argocli
+  newTag: v3.1.1
